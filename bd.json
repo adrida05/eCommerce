@@ -1,0 +1,70 @@
+{
+  "user": "Candidato 1",
+  "version": "0.0.1",
+  "data": {
+    "0": {
+      "id": 0,
+      "nombre": "A",
+      "razon_social": "A",
+      "activo": true,
+      "estatus": "alta",
+      "direccion": "a"
+    },
+    "1": {
+      "id": 0,
+      "nombre": "Nombre A",
+      "razon_social": "Apellido A",
+      "activo": true,
+      "estatus": "alta",
+      "direccion": "XXXXX"
+    },
+    "2": {
+      "id": 0,
+      "nombre": "Nombre B",
+      "razon_social": "Apellido B",
+      "activo": true,
+      "estatus": "baja",
+      "direccion": "XXXXX"
+    },
+    "3": {
+      "id": 0,
+      "nombre": "Nombre C",
+      "razon_social": "Apellido C",
+      "activo": true,
+      "estatus": "suspendido",
+      "direccion": "XXXXX"
+    },
+    "4": {
+      "id": 0,
+      "nombre": "Nombre D",
+      "razon_social": "Apellido D",
+      "activo": true,
+      "estatus": "alta",
+      "direccion": "XXXXX"
+    },
+    "5": {
+      "id": 0,
+      "nombre": "Nombre E",
+      "razon_social": "Apellido E",
+      "activo": true,
+      "estatus": "alta",
+      "direccion": "XXXXX"
+    },
+    "6": {
+      "id": 0,
+      "nombre": "Nombre F",
+      "razon_social": "Apellido F",
+      "activo": true,
+      "estatus": "alta",
+      "direccion": "XXXXX"
+    },
+    "7": {
+      "id": 0,
+      "nombre": "Nombre G",
+      "razon_social": "Apellido G",
+      "activo": false,
+      "estatus": "alta",
+      "direccion": "XXXXX"
+    }
+  }
+}

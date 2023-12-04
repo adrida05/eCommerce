@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>{{ isEditModeEnabled ? 'Editar' : 'Agregar'}} Proveedor</h1>
+<div mat-dialog-content >
+
+                <mat-form-field appearance="outline" >
+                    <mat-label>Nombre</mat-label>
+                    <input matInput type="text" required [(ngModel)]="data.nombre" maxlength="100">
+                    <mat-error *ngIf="!data.nombre">
+                        Campo requerido
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Razón Social</mat-label>
+                    <input matInput type="text"   [(ngModel)]="data.razon_social" required  maxlength="100" >
+                    <mat-error *ngIf="!data.razon_social">
+                        Campo requerido
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Dirección</mat-label>
+                    <input matInput type="text"   [(ngModel)]="data.direccion" required  maxlength="200" >
+                    <mat-error *ngIf="!data.direccion">
+                        Campo requerido
+                    </mat-error>
+                </mat-form-field>
+          
+</div>
+
+<div mat-dialog-actions>
+    <button mat-flat-button [color]="'default'"  (click)="cerrar()">Cancelar</button>
+    <button  mat-flat-button [color]="'primary'" (click)="guardar()" >Guardar</button>
+
+</div>

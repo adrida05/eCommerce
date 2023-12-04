@@ -1,0 +1,129 @@
+<div class="container-lg p-5" style="height: 75vh !important;">
+    <div class="row">
+        <div class="col-md-10  my-auto">
+            <!-- Title -->
+            <h5 class="text-primary">ADMINISTRACIÓN DE PROVEEDORES</h5>
+        </div>
+
+        <div class="col-md-2">
+            <!-- Add  button -->
+            <button class="ml-4" mat-flat-button [color]="'primary'" (click)="openModalDialog()">
+                <mat-icon>add</mat-icon>
+                <span class="ml-2 mr-1">Nuevo</span>
+            </button>
+        </div>
+    </div>
+
+
+    <br />
+
+
+    <!-- Table -->
+    <div class="row">
+
+        <div class="col-md-12 mat-elevation-z8">
+            <div class="grid">
+                <table class="w-full bg-transparent" mat-table [dataSource]="dataSource">
+
+                   
+
+                    <!--Nombre-->
+                    <ng-container matColumnDef="nombre">
+                        <th mat-header-cell class="bg-gray-100 " *matHeaderCellDef>
+                            <div class="text-md font-semibold text-gray-400">
+                                NOMBRE
+                            </div>
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <span class=" whitespace-nowrap">
+                                {{element.nombre}}
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <!--Razon Social-->
+                    <ng-container matColumnDef="razon_social">
+                        <th mat-header-cell class="bg-gray-100 " *matHeaderCellDef>
+                            <div class="text-md font-semibold text-gray-400">
+                                RAZÓN SOCIAL
+                            </div>
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <span class=" whitespace-nowrap">
+                                {{element.razon_social}}
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <!--Direccion-->
+                    <ng-container matColumnDef="direccion">
+                        <th mat-header-cell class="bg-gray-100 " *matHeaderCellDef>
+                            <div class="text-md font-semibold text-gray-400">
+                                DIRECCIÓN
+                            </div>
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <span class=" whitespace-nowrap">
+                                {{element.direccion }}
+                            </span>
+                        </td>
+                    </ng-container>
+
+                          <!--Estatus-->
+                          <ng-container matColumnDef="activo">
+                            <th mat-header-cell class="bg-gray-100 " *matHeaderCellDef>
+                                <div class="text-md font-semibold text-gray-400">
+                                    ESTATUS
+                                </div>
+                            </th>
+                            <td mat-cell *matCellDef="let element">
+                                <span class="p-2 mb-2 bg-success text-white" *ngIf="element.activo">
+                                    Activo
+                                </span>
+                                <span class="p-2 mb-2 bg-danger text-white" *ngIf="!element.activo">
+                                    Inactivo
+                                </span>
+                           
+    
+                            </td>
+                        </ng-container>
+
+                  
+
+
+
+                    <!--Acciones-->
+                    <ng-container matColumnDef="acciones">
+                        <th mat-header-cell class="bg-gray-100 text-md font-semibold text-gray-400" *matHeaderCellDef>
+                            ACCIONES
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+
+                            <button mat-icon-button (click)="detalleRegistro(element)">
+                                <mat-icon color="primary">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button (click)="mostrarAlerta(element)">
+                                <mat-icon color="warn">close</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+
+            </div>
+
+            <div class=" bottom-0 right-0">
+
+                <mat-paginator [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
+                </mat-paginator>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

@@ -1,0 +1,44 @@
+.alert-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+  &.shadow {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .alert {
+    min-width: 500px;
+    margin: auto;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3), 3px 3px 4px rgba(0, 0, 0, 0.4);
+
+    .alert-header {
+      display: flex;
+
+      .alert-image {
+        width: 54px;
+        margin: auto;
+      }
+    }
+
+    .alert-content {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .alert-footer {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    
+  }
+
+}

@@ -1,0 +1,31 @@
+
+table {
+    width: 100%;
+  }
+
+  .mat-column-estatus
+  {
+    width: 15%;
+    text-transform: capitalize;
+  }
+
+  .mat-column-nombre
+  {
+    width: 15%;
+    text-transform: capitalize;
+  }
+
+  .mat-column-apellido
+  {
+    width: 15%;
+    text-transform: capitalize;
+  }
+
+  .mat-column-descripcion
+  {
+    width: 30%;
+    text-transform: capitalize;
+  }
+  #toast-container > div {
+    opacity:1;
+}
