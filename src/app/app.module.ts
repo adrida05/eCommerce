@@ -16,6 +16,7 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 import { getSpanishPaginatorIntl } from './spanish-paginator-intl';
 import { AngularMaterialModule } from './material.module';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ToastrModule } from 'ngx-toastr';
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({}),
     EffectsModule.forRoot(effects),
-    ToastrModule.forRoot(), // ToastrModule added
+    ToastrModule.forRoot(), 
+    NgxSpinnerModule,
   ],
   providers: [
     { provide: MatPaginatorIntl, useValue: getSpanishPaginatorIntl() },
